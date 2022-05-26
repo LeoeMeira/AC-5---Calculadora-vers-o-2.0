@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <form action="/calculadora" method="post">
+        <label for="">Selecione a operação:</label>
+        <select name="operacao" id="operacao">
+            <option value="soma" selected>Soma</option>
+            <option value="sub">Subtração</option>
+            <option value="mult">Multiplicação</option>
+            <option value="div">Divisão</option>
+            <option value="raiz">Raiz Quadrada</option>
+            <option value="exp">Exponenciação</option>
+            <option value="log">Logaritmo</option>
+        </select>
+        <br>
+    <div>
+    <label for="">Primeiro número:</label>
+    <input type="number" name="v1">
+    </div>
+    <div id="number2">
+    <label for="">Segundo número:</label>
+    <input type="number" name="v2" id="v2">
+    </div>
+    <button type="submit">Submeter</button>
+    </form>
+    <script>
+        var operacao = document.getElementById('operacao')
+        var numero = document.getElementById('number2')
+        var input = document.getElementById('v2')
+        function mudarCampo(){
+            if (operacao.value == 'raiz' || 'log'){
+                numero.style.display = 'none'
+                input.value = 0
+            } 
+            else 
+            {numero.style.display = 'block'
+            input.value = ''
+        }
+        }
+        operacao.addEventListener('change',mudarCampo)
+    </script>
+</body>
+</html>
