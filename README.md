@@ -1,2 +1,2 @@
-# AC-5---Calculadora-vers-o-2.0
+# AC-5-Calculadora-versao-2.0
 Atividade continua - Faculdade
